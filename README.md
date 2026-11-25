@@ -55,8 +55,8 @@ describe('test suite - pruebas pagina de inicio', function(){
     cy.get('.checkout-button').click()
     
     // Billing Information
-    cy.get('#billing_first_name').type('Santiago')
-    cy.get('#billing_last_name').type('Bedoya')
+    cy.get('#billing_first_name').type('nombre')
+    cy.get('#billing_last_name').type('apellido')
     cy.get('#billing_country_field .select2-selection').click()
     cy.get('#select2-billing_country-results').contains('Colombia').click()
     cy.get('#billing_address_1').type('Cra 88 #35d36')
@@ -65,7 +65,7 @@ describe('test suite - pruebas pagina de inicio', function(){
     cy.get('#select2-billing_state-results').contains('Antioquia').click()
     cy.get('#billing_postcode').type('13114')
     cy.get('#billing_phone').type('+57 (604) 444 37 00')
-    cy.get('#billing_email').type('santiago.bedoya4@correo.tdea.edu.co')
+    cy.get('#billing_email').type('ejemplo@example.com')
     cy.get('#terms').check()
   })
 })
